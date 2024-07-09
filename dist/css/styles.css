@@ -1,0 +1,279 @@
+/* 
+FECHA: 05.07.2024
+CLAN: Gates
+CODERS: David Blandon
+        Luisa Ramirez
+        Daniel Alejandro
+        Juan Pablo */
+
+/* ------------------------------------------ TS PROJECT USING AN API: POKEMON API ------------------------------------------ */
+
+/* ---------------------------------- HTML setting ---------------------------------- */
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* ---------------------------------- General page styling ---------------------------------- */
+
+body {
+    background: linear-gradient(0deg, #E6DADA 0%, #7396ca 90%, #63a48f 100%);
+}
+
+/* ---------------------------------- General Header styling ---------------------------------- */
+header {
+    text-align: center;
+}
+
+/* ---------------------------------- Style for the logo and navigation ---------------------------------- */
+a,p{
+    font-weight:800;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+    list-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+    padding: 10px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff99;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.navbar ul li:hover {
+    background-color: #5eaebab3;
+    font-size: 1.1rem;
+    transform: scale(1.1);
+        & a{
+                color: #ffffff
+        }
+}
+
+/* ---------------------------------- Silhouettes styling as decoration for Header ---------------------------------- */
+
+.silueta1 {
+    position: absolute;
+    opacity: 0.3;
+    width: 9rem;
+    left: 5vw;
+    top: 40px;
+}
+
+.silueta2 {
+    position: absolute;
+    opacity: 0.3;
+    width: 9rem;
+    right: 5vw;
+    top: 40px;
+}
+
+.silueta3 {
+    position: absolute;
+    opacity: 0.3;
+    width: 7rem;
+    left: 16vw;
+    top: 40px;
+}
+
+.silueta4 {
+    position: absolute;
+    opacity: 0.3;
+    width: 7rem;
+    right: 16vw;
+    top: 40px;
+}
+
+.silueta5 {
+    position: absolute;
+    opacity: 0.3;
+    width: 5rem;
+    left: 25vw;
+    top: 40px;
+}
+
+.silueta6 {
+    position: absolute;
+    opacity: 0.3;
+    width: 5rem;
+    right: 25vw;
+    top: 40px;
+}
+
+/* ---------------------------------- About Us section styling ---------------------------------- */
+
+.about-us h1 {
+    font-weight: bolder;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-us p {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-us p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------------------------------- Paging links styling ---------------------------------- */
+
+.links-paginacion a{
+    font-size: 30px
+}
+
+/* ---------------------------------- Footer styling ---------------------------------- */
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* ---------------------------------- Additional styling for Cards ----------------------------------*/
+
+.card {
+    width: 18rem;
+    -webkit-box-shadow: 10px 13px 24px 0px rgba(110,109,110,0.6);
+    -moz-box-shadow: 10px 13px 24px 0px rgba(110,109,110,0.6);
+    box-shadow: 10px 13px 24px 0px rgba(110,109,110,0.6);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+
+    & h4 {
+        color: #7396ca !important;
+    }
+}
+
+.card-container {
+    margin-bottom: 50px;
+}
+
+/* ---------------------------------- Media Queries ---------------------------------- */
+
+@media (min-width: 1081px) and (max-width: 1324px) {
+
+    .silueta1,
+    .silueta2 {
+        top: 70px;
+        width: 7rem;
+    }
+
+    .silueta3,
+    .silueta4 {
+        top: 70px;
+        width: 5rem;
+    }
+
+    .silueta5,
+    .silueta6 {
+        top: 70px;
+        width: 4rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+
+    .silueta1,
+    .silueta2 {
+        top: 70px;
+        width: 5rem;
+    }
+
+    .silueta3,
+    .silueta4 {
+        top: 70px;
+        width: 4rem;
+    }
+
+    .silueta5,
+    .silueta6 {
+        top: 70px;
+        width: 3rem;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 767px) {
+
+    .silueta1,
+    .silueta2 {
+        top: 30px;
+        width: 5rem;
+    }
+
+    .silueta3,
+    .silueta4 {
+        top: 80px;
+        width: 3.5rem;
+    }
+
+    .silueta5,
+    .silueta6 {
+        top: 120px;
+        width: 2rem;
+    }
+
+    body {
+        background: linear-gradient(0deg, #E6DADA 0%, #7396ca 98%, #63a48f 100%);
+    }
+}
+
+@media (max-width: 550px) {
+
+    .silueta1,
+    .silueta2,
+    .silueta3,
+    .silueta4,
+    .silueta5,
+    .silueta6 {
+        display: none
+    }
+
+    body {
+        background: linear-gradient(0deg, #E6DADA 0%, #7396ca 98%, #63a48f 100%);
+    }
+}
+

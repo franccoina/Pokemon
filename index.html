@@ -1,0 +1,143 @@
+<!-- 
+FECHA: 05.07.2024
+CLAN: Gates
+CODERS: David Blandon
+        Luisa Ramirez
+        Daniel Alejandro
+        Juan Pablo
+        -->
+
+<!-- ------------------------------------------ TS PROJECT USING AN API: POKEMON API ------------------------------------------ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+      content="DOM, Elements, HTML5, Develop, TypeScript, JavaScript, Bootstrap, Riwi" />
+    <meta name="sitedomain" content="https://APIs_Riwi.com/" />
+    <meta name="organization" content="Riwi_Gates" />
+    <meta name="author" content="Riwi_Gates" />
+    <meta name="designer" content="Riwi_Gates" />
+    <meta name="copyright" content="© 2024 Riwi. All rights reserved" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="revisit-after" content="15days" />
+    <link rel="stylesheet" href="./dist/css/styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="../assets/icons/logo-pokemon.ico"
+      type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Pokemon | Special Searcher</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- Header: Silhouettes decorations -->
+      <article>
+        <img class="silueta1" src="../assets/img/siluetas-pokemones.webp"
+          alt="pokemons-silhouettes">
+        <img class="silueta2" src="../assets/img/siluetas-pokemones.webp"
+          alt="pokemons-silhouettes">
+        <img class="silueta3" src="../assets/img/siluetas-pokemones.webp"
+          alt="pokemons-silhouettes">
+        <img class="silueta4" src="../assets/img/siluetas-pokemones.webp"
+          alt="pokemons-silhouettes">
+        <img class="silueta5" src="../assets/img/siluetas-pokemones.webp"
+          alt="pokemons-silhouettes">
+        <img class="silueta6" src="../assets/img/siluetas-pokemones.webp"
+          alt="pokemons-silhouettes">
+      </article>
+      <!-- Header: Navbar and Logo -->
+      <nav
+        class="navbar py-4 px-5 text-center d-flex flex-column align-items-center">
+        <div class="logo-container">
+          <img
+            src="https://1000logos.net/wp-content/uploads/2017/05/Pokemon-Logo.png"
+            width="200px" alt="pokemon-logo">
+        </div>
+        <ul class="navbar-links text-center d-flex flex-wrap justify-content-center">
+          <li><a href="#about"> About </a></li>
+          <li><a href="#cards"> Cards </a></li>
+          <li><a href="#contact"> Contact </a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- About us Section -->
+      <section id="about" class="about-us bg-light py-5 border border-dark">
+        <div class="container text-center pt-2 pb-4">
+          <h1>Welcome to our Pokémon fan page!</h1>
+          <p>We are a group of passionate
+            Pokémon trainers who love to share our
+            knowledge and excitement about the Pokémon universe. From the latest
+            game releases to tips and tricks for
+            catching 'em all, we are here to help you become a Pokémon
+            Master.</p>
+          <p>Our team consists of veteran trainers, competitive battlers, and
+            casual fans alike. We believe in the power
+            of friendship and the thrill of adventure that Pokémon brings to all
+            of us.</p>
+          <p>Join us as we explore the vast world of Pokémon together!</p>
+        </div>
+      </section>
+      <!-- Cards Section with Cards -->
+      <article class="container text-light text-center mt-5 pt-3 pb-2 px-2">
+        <h2><strong>Characters</strong></h2>
+        <p>Immerse yourself in the fascinating world of our favorite heroes and
+          villains. In this section, you can explore a gallery of iconic
+          characters, each with their own story and unique abilities. From the
+          most legendary to the most intriguing, join us on this journey to
+          learn more about these captivating protagonists.</p>
+      </article>
+      <article id="cards"
+        class="card-container container mt-5 p-2 d-flex justify-content-center">
+      </article>
+      <!-- Paging links (kind of a "second nav") -->
+      <div class="d-flex justify-content-center">
+        <nav class="links-paginacion pt-2 pb-5"></nav>
+      </div>
+    </main>
+    <!-- Footer with legal info and social media -->
+    <footer id="contact" class="bg-light p-5 border border-dark">
+      <div class="container text-center px-5 pt-5">
+        <p class="px-5 text-secondary">¡Explora el mundo Pokémon con nosotros!
+          Descubre más
+          sobre tus Pokémon favoritos, estrategias de batalla y noticias del
+          universo Pokémon. ¡Atrápalos ya!</p>
+        <div class="footer-links m-5">
+          <!-- Iconos de Bootstrap -->
+          <a href="https://x.com/?lang=es" target="_blank"
+            class="text-secondary mb-2 mx-4"><i
+              class="bi bi-twitter-x"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            class="text-secondary mb-2 mx-4"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/?hl=es-la" target="_blank"
+            class="text-secondary mb-2 mx-4"><i
+              class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <p class="text-center mt-3 text-secondary">&copy; All rights reserved |
+        Clan Gates from Riwi, Be a Coder</p>
+    </footer>
+    <!-- Scripts for Bootstrap and JS/TS -->
+    <script src="./dist/index.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  </body>
+
+</html>
