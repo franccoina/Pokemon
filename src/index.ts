@@ -1,9 +1,8 @@
 // FECHA: 05.07.2024
 // CLAN: Gates
-// CODERS: David Blandon
-//         Luisa Ramirez
+// CODERS: David Blandón Mena
+//         Luisa Ramírez Cardona
 //         Daniel Alejandro
-//         Juan Pablo
 
 // ------------------------------------------ TS PROJECT USING AN API: POKEMON API ------------------------------------------
 
