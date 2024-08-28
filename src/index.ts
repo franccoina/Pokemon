@@ -19,14 +19,14 @@ async function index(pokemonApi: string = "https://pokeapi.co/api/v2/pokemon"): 
     let content = document.createElement('div') as HTMLDivElement;
     
     try {
-        setTimeout(() => {
-            div.classList.add("w-100", "d-flex", "justify-content-center", "align-items-center");
-            img.src = "../assets/svg/loader.svg";
-            img.alt = "Cargando..."
-            img.classList.add("loader");
-            div.appendChild(img);
-            card.appendChild(div);
-        }, 1);
+        // Añadir loader antes de la carga de datos
+        div.classList.add("w-100", "d-flex", "justify-content-center", "align-items-center", "loader-container");
+        img.src = "../assets/svg/loader.svg";
+        img.alt = "Cargando..."
+        img.classList.add("loader");
+        div.appendChild(img);
+        card.innerHTML = ""; // Limpiar el contenido anterior
+        card.appendChild(div); // Mostrar loader arriba de las cards
 
         // Obtener datos de la API
         let response: Response = await fetch(pokemonApi);
@@ -64,7 +64,7 @@ async function index(pokemonApi: string = "https://pokeapi.co/api/v2/pokemon"): 
                 img.classList.add("card-img-top");
                 div.classList.add("card-body");
                 h4.textContent = pokemon.name;
-                h4.classList. add("card-title", "text-capitalize", "fw-bold")
+                h4.classList.add("card-title", "text-capitalize", "fw-bold")
                 p.textContent = "Main ability: ";
                 p.classList.add("card-text", "fw-bold");
                 small.textContent = `⭐ ${pokemonData.abilities[0].ability.name}`;
@@ -82,22 +82,21 @@ async function index(pokemonApi: string = "https://pokeapi.co/api/v2/pokemon"): 
                 console.error('Error fetching individual Pokémon:', err);
             }
 
-            content.classList.add("d-flex", "flex-wrap", "gap-5","justify-content-center");
-            
+            content.classList.add("d-flex", "flex-wrap", "gap-5", "justify-content-center");
+
             fragment.appendChild(content);
         }
         // Limpiar contenido anterior
-        card.innerHTML = ""
-        
+        card.innerHTML = "";
+
         // Agregar nuevo contenido
         card.appendChild(fragment);
 
-         // Limpiar enlaces de paginación anteriores
+        // Limpiar enlaces de paginación anteriores
         linksPaginacion.innerHTML = "";
 
         // Mostrar enlaces de paginación
-        
-        if(data.previous){
+        if (data.previous) {
             const prevLink = document.createElement("a") as HTMLAnchorElement;
             prevLink.textContent = "⬅︎";
             prevLink.href = data.previous;
@@ -105,7 +104,7 @@ async function index(pokemonApi: string = "https://pokeapi.co/api/v2/pokemon"): 
             linksPaginacion.appendChild(prevLink);
         }
 
-        if(data.next){
+        if (data.next) {
             const nextLink = document.createElement("a") as HTMLAnchorElement;
             nextLink.textContent = "➡︎";
             nextLink.href = data.next;
@@ -132,4 +131,3 @@ document.addEventListener("click", (e: Event) => {
         index(nextPageUrl); // Cargar datos de la página siguiente al hacer clic en el enlace de paginación
     }
 });
-
